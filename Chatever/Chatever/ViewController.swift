@@ -12,7 +12,7 @@ let ChannelName = "messages"
 
 class ViewController: JSQMessagesViewController {
     
-    let syncano = Syncano.sharedInstanceWithApiKey(212adb9b94ee972fdbba69986a5f5944f2046d77, instanceName: chatever)
+    let syncano = Syncano.sharedInstanceWithApiKey("212adb9b94ee972fdbba69986a5f5944f2046d77", instanceName: "chatever")
     let channel = SCChannel(name: ChannelName)
     
     let incomingBubble = JSQMessagesBubbleImageFactory().incomingMessagesBubbleImageWithColor(UIColor(red: 10/255, green: 180/255, blue: 230/255, alpha: 1.0))
@@ -23,7 +23,7 @@ class ViewController: JSQMessagesViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.setup()
-        self.addDemoMessages()
+        self.downloadLatestMessagesFromSyncano()
         
     }
 
@@ -98,9 +98,49 @@ extension ViewController{
     override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
         let message = JSQMessage(senderId: senderId, senderDisplayName: senderDisplayName, date: date, text: text)
         self.messages += [message]
+        self.sendMessageToSyncano(message)
         self.finishSendingMessage()
     }
     
     override func didPressAccessoryButton(sender: UIButton!) {
+    }
+}
+
+// MARK: - syncano
+extension ViewController{
+    
+    func sendMessageToSyncano(message: JSQMessage){
+        let messageToSent = Message()
+        messageToSent.text = message.text
+        messageToSent.senderId = self.senderId
+        messageToSent.channel = ChannelName
+        messageToSent.other_permissions = .Full
+        messageToSent.saveWithCompletionBlock{error in
+            if(error != nil){
+                //error!!
+            }
+        }
+    }
+    
+    func downloadLatestMessagesFromSyncano() {
+        Message.please().giveMeDataObjectsWithCompletion { objects, error in
+            if let messages = objects as? [Message]! {
+                self.messages = self.jsqMessagesFromSyncanoMessages(messages)
+                self.finishReceivingMessage()
+            }
+        }
+    }
+    
+    func jsqMessageFromSyncanoMessage(message: Message) -> JSQMessage {
+        let jsqMessage = JSQMessage(senderId: message.senderId, senderDisplayName: message.senderId, date: message.created_at, text: message.text)
+        return jsqMessage
+    }
+    
+    func jsqMessagesFromSyncanoMessages(messages: [Message]) -> [JSQMessage] {
+        var jsqMessages : [JSQMessage] = []
+        for message in messages {
+            jsqMessages.append(self.jsqMessageFromSyncanoMessage(message))
+        }
+        return jsqMessages
     }
 }
