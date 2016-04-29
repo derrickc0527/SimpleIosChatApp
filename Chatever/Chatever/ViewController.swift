@@ -17,6 +17,8 @@ class ViewController: JSQMessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.setup()
+        self.addDemoMessages()
         
     }
 
@@ -30,15 +32,16 @@ class ViewController: JSQMessagesViewController {
     }
 }
 
+// MARK: - setup
 extension ViewController{
     func addDemoMessages(){
         for i in 1...10{
-            let sender = (i%2 == 0)? "Server" : self.senderId
-            let mesageContent = "Message nr. \(i)"
-            let massage = JSQMessage(senderId: sender, displayName: sender, text: messageContent)
+            let sender = (i%2 == 0) ? "Server" : self.senderId
+            let messageContent = "Message nr. \(i)"
+            let message = JSQMessage(senderId: sender, displayName: sender, text: messageContent)
             self.messages += [message]
         }
-        self.reloadMessageView()
+        self.reloadMessagesView()
     }
     
     func setup(){
@@ -47,12 +50,36 @@ extension ViewController{
     }
 }
 
+/**
+*  implement JSQMessagesVC protocols
+*/
 
-// MARK: -
+// MARK: - data source
 extension ViewController{
-    override func collectionView(collectionVIew: UICollectionView, numberOfItemInSection section: Int)->Int{
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         return self.messages.count
     }
+    
+    override func collectionView(collectionView: JSQMessagesCollectionView!, messageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageData! {
+        let data = self.messages[indexPath.row]
+        return data
+    }
+    
+    override func collectionView(collectionView: JSQMessagesCollectionView!, didDeleteMessageAtIndexPath indexPath: NSIndexPath!) {
+        self.messages.removeAtIndex(indexPath.row)
+    }
+    
+    override func collectionView(collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageBubbleImageDataSource! {
+        let data = messages[indexPath.row]
+        switch(data.senderId){
+        case self.senderId:
+            return self.outgoingBubble
+        default:
+            return self.incomingBubble
+        }
+    }
+    
+    override func collectionView(collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageAvatarImageDataSource! {
+        return nil
+    }
 }
-
-
