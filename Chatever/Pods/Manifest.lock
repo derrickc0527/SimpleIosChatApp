@@ -1,0 +1,52 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - FMDB (2.6):
+    - FMDB/standard (= 2.6)
+  - FMDB/standard (2.6)
+  - FMDBMigrationManager (1.4.1):
+    - FMDBMigrationManager/System (= 1.4.1)
+  - FMDBMigrationManager/System (1.4.1):
+    - FMDB/standard (>= 2.3)
+  - JSQMessagesViewController (7.2.0):
+    - JSQSystemSoundPlayer (~> 2.0.1)
+  - JSQSystemSoundPlayer (2.0.1)
+  - Mantle (2.0.7):
+    - Mantle/extobjc (= 2.0.7)
+  - Mantle/extobjc (2.0.7)
+  - syncano-ios (4.1.2):
+    - AFNetworking (= 3.1.0)
+    - FMDB (= 2.6)
+    - FMDBMigrationManager (= 1.4.1)
+    - Mantle (~> 2.0)
+    - UICKeyChainStore (= 2.1.0)
+  - UICKeyChainStore (2.1.0)
+
+DEPENDENCIES:
+  - JSQMessagesViewController
+  - syncano-ios
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  FMDB: c1968bab3ab0aed38f66cb778ae1e7fa9a652b6e
+  FMDBMigrationManager: d52007f328ea0665e8985ca8a33500707aef084f
+  JSQMessagesViewController: 73cab48aa92fc2d512f3b6724f3425cc47a19eb5
+  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
+  Mantle: bc40bb061d8c2c6fb48d5083e04d928c3b7f73d9
+  syncano-ios: c1f62aa3e99b79c0515b5e665d28ef3abf410bb2
+  UICKeyChainStore: f1cbd42216a113f0165de1e733e62905b8823432
+
+COCOAPODS: 0.39.0

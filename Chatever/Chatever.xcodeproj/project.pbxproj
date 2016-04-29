@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49183CA01CD39FCB0086761F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49183C9F1CD39FCB0086761F /* AppDelegate.swift */; };
+		49183CA21CD39FCB0086761F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49183CA11CD39FCB0086761F /* ViewController.swift */; };
+		49183CA51CD39FCB0086761F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49183CA31CD39FCB0086761F /* Main.storyboard */; };
+		49183CA71CD39FCB0086761F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49183CA61CD39FCB0086761F /* Assets.xcassets */; };
+		49183CAA1CD39FCB0086761F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49183CA81CD39FCB0086761F /* LaunchScreen.storyboard */; };
+		49183CB51CD39FCB0086761F /* ChateverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49183CB41CD39FCB0086761F /* ChateverTests.swift */; };
+		49183CC01CD39FCB0086761F /* ChateverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49183CBF1CD39FCB0086761F /* ChateverUITests.swift */; };
+		B1BE25EFF92AC65A9773F35C /* libPods-Chatever.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 988315B7A8724E4CF00D4F3B /* libPods-Chatever.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		49183CB11CD39FCB0086761F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49183C941CD39FCB0086761F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49183C9B1CD39FCB0086761F;
+			remoteInfo = Chatever;
+		};
+		49183CBC1CD39FCB0086761F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49183C941CD39FCB0086761F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49183C9B1CD39FCB0086761F;
+			remoteInfo = Chatever;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08871120E0774025E5731E01 /* Pods-Chatever.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatever.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chatever/Pods-Chatever.debug.xcconfig"; sourceTree = "<group>"; };
+		49183C9C1CD39FCB0086761F /* Chatever.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatever.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49183C9F1CD39FCB0086761F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		49183CA11CD39FCB0086761F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49183CA41CD39FCB0086761F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		49183CA61CD39FCB0086761F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		49183CA91CD39FCB0086761F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		49183CAB1CD39FCB0086761F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49183CB01CD39FCB0086761F /* ChateverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChateverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49183CB41CD39FCB0086761F /* ChateverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChateverTests.swift; sourceTree = "<group>"; };
+		49183CB61CD39FCB0086761F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49183CBB1CD39FCB0086761F /* ChateverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChateverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49183CBF1CD39FCB0086761F /* ChateverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChateverUITests.swift; sourceTree = "<group>"; };
+		49183CC11CD39FCB0086761F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49183CCD1CD3A2FE0086761F /* Chatever-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chatever-Bridging-Header.h"; sourceTree = "<group>"; };
+		53D47C615604A5527370F057 /* Pods-Chatever.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatever.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chatever/Pods-Chatever.release.xcconfig"; sourceTree = "<group>"; };
+		988315B7A8724E4CF00D4F3B /* libPods-Chatever.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Chatever.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49183C991CD39FCB0086761F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1BE25EFF92AC65A9773F35C /* libPods-Chatever.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49183CAD1CD39FCB0086761F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49183CB81CD39FCB0086761F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		297D0BF2B212C10AACF838E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				08871120E0774025E5731E01 /* Pods-Chatever.debug.xcconfig */,
+				53D47C615604A5527370F057 /* Pods-Chatever.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		49183C931CD39FCB0086761F = {
+			isa = PBXGroup;
+			children = (
+				49183C9E1CD39FCB0086761F /* Chatever */,
+				49183CB31CD39FCB0086761F /* ChateverTests */,
+				49183CBE1CD39FCB0086761F /* ChateverUITests */,
+				49183C9D1CD39FCB0086761F /* Products */,
+				297D0BF2B212C10AACF838E5 /* Pods */,
+				95F1B7123B578302386114D4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		49183C9D1CD39FCB0086761F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49183C9C1CD39FCB0086761F /* Chatever.app */,
+				49183CB01CD39FCB0086761F /* ChateverTests.xctest */,
+				49183CBB1CD39FCB0086761F /* ChateverUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49183C9E1CD39FCB0086761F /* Chatever */ = {
+			isa = PBXGroup;
+			children = (
+				49183C9F1CD39FCB0086761F /* AppDelegate.swift */,
+				49183CA11CD39FCB0086761F /* ViewController.swift */,
+				49183CA31CD39FCB0086761F /* Main.storyboard */,
+				49183CA61CD39FCB0086761F /* Assets.xcassets */,
+				49183CA81CD39FCB0086761F /* LaunchScreen.storyboard */,
+				49183CAB1CD39FCB0086761F /* Info.plist */,
+				49183CCD1CD3A2FE0086761F /* Chatever-Bridging-Header.h */,
+			);
+			path = Chatever;
+			sourceTree = "<group>";
+		};
+		49183CB31CD39FCB0086761F /* ChateverTests */ = {
+			isa = PBXGroup;
+			children = (
+				49183CB41CD39FCB0086761F /* ChateverTests.swift */,
+				49183CB61CD39FCB0086761F /* Info.plist */,
+			);
+			path = ChateverTests;
+			sourceTree = "<group>";
+		};
+		49183CBE1CD39FCB0086761F /* ChateverUITests */ = {
+			isa = PBXGroup;
+			children = (
+				49183CBF1CD39FCB0086761F /* ChateverUITests.swift */,
+				49183CC11CD39FCB0086761F /* Info.plist */,
+			);
+			path = ChateverUITests;
+			sourceTree = "<group>";
+		};
+		95F1B7123B578302386114D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				988315B7A8724E4CF00D4F3B /* libPods-Chatever.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49183C9B1CD39FCB0086761F /* Chatever */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49183CC41CD39FCB0086761F /* Build configuration list for PBXNativeTarget "Chatever" */;
+			buildPhases = (
+				1606D557C9850077E7C7ADC4 /* Check Pods Manifest.lock */,
+				49183C981CD39FCB0086761F /* Sources */,
+				49183C991CD39FCB0086761F /* Frameworks */,
+				49183C9A1CD39FCB0086761F /* Resources */,
+				5EA714A8DD64C4F9875B26C9 /* Embed Pods Frameworks */,
+				CAB3B4397FDD4A8FF02FC26A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chatever;
+			productName = Chatever;
+			productReference = 49183C9C1CD39FCB0086761F /* Chatever.app */;
+			productType = "com.apple.product-type.application";
+		};
+		49183CAF1CD39FCB0086761F /* ChateverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49183CC71CD39FCB0086761F /* Build configuration list for PBXNativeTarget "ChateverTests" */;
+			buildPhases = (
+				49183CAC1CD39FCB0086761F /* Sources */,
+				49183CAD1CD39FCB0086761F /* Frameworks */,
+				49183CAE1CD39FCB0086761F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49183CB21CD39FCB0086761F /* PBXTargetDependency */,
+			);
+			name = ChateverTests;
+			productName = ChateverTests;
+			productReference = 49183CB01CD39FCB0086761F /* ChateverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		49183CBA1CD39FCB0086761F /* ChateverUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49183CCA1CD39FCB0086761F /* Build configuration list for PBXNativeTarget "ChateverUITests" */;
+			buildPhases = (
+				49183CB71CD39FCB0086761F /* Sources */,
+				49183CB81CD39FCB0086761F /* Frameworks */,
+				49183CB91CD39FCB0086761F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49183CBD1CD39FCB0086761F /* PBXTargetDependency */,
+			);
+			name = ChateverUITests;
+			productName = ChateverUITests;
+			productReference = 49183CBB1CD39FCB0086761F /* ChateverUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49183C941CD39FCB0086761F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = derrickCorp;
+				TargetAttributes = {
+					49183C9B1CD39FCB0086761F = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					49183CAF1CD39FCB0086761F = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 49183C9B1CD39FCB0086761F;
+					};
+					49183CBA1CD39FCB0086761F = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 49183C9B1CD39FCB0086761F;
+					};
+				};
+			};
+			buildConfigurationList = 49183C971CD39FCB0086761F /* Build configuration list for PBXProject "Chatever" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 49183C931CD39FCB0086761F;
+			productRefGroup = 49183C9D1CD39FCB0086761F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49183C9B1CD39FCB0086761F /* Chatever */,
+				49183CAF1CD39FCB0086761F /* ChateverTests */,
+				49183CBA1CD39FCB0086761F /* ChateverUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49183C9A1CD39FCB0086761F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49183CAA1CD39FCB0086761F /* LaunchScreen.storyboard in Resources */,
+				49183CA71CD39FCB0086761F /* Assets.xcassets in Resources */,
+				49183CA51CD39FCB0086761F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49183CAE1CD39FCB0086761F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49183CB91CD39FCB0086761F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1606D557C9850077E7C7ADC4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5EA714A8DD64C4F9875B26C9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chatever/Pods-Chatever-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAB3B4397FDD4A8FF02FC26A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chatever/Pods-Chatever-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49183C981CD39FCB0086761F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49183CA21CD39FCB0086761F /* ViewController.swift in Sources */,
+				49183CA01CD39FCB0086761F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49183CAC1CD39FCB0086761F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49183CB51CD39FCB0086761F /* ChateverTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49183CB71CD39FCB0086761F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49183CC01CD39FCB0086761F /* ChateverUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		49183CB21CD39FCB0086761F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49183C9B1CD39FCB0086761F /* Chatever */;
+			targetProxy = 49183CB11CD39FCB0086761F /* PBXContainerItemProxy */;
+		};
+		49183CBD1CD39FCB0086761F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49183C9B1CD39FCB0086761F /* Chatever */;
+			targetProxy = 49183CBC1CD39FCB0086761F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		49183CA31CD39FCB0086761F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49183CA41CD39FCB0086761F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		49183CA81CD39FCB0086761F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49183CA91CD39FCB0086761F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		49183CC21CD39FCB0086761F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		49183CC31CD39FCB0086761F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49183CC51CD39FCB0086761F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08871120E0774025E5731E01 /* Pods-Chatever.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = Chatever/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.derrickCorp.Chatever;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Chatever/Chatever-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		49183CC61CD39FCB0086761F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53D47C615604A5527370F057 /* Pods-Chatever.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = Chatever/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.derrickCorp.Chatever;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Chatever/Chatever-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		49183CC81CD39FCB0086761F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ChateverTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.derrickCorp.ChateverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chatever.app/Chatever";
+			};
+			name = Debug;
+		};
+		49183CC91CD39FCB0086761F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ChateverTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.derrickCorp.ChateverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chatever.app/Chatever";
+			};
+			name = Release;
+		};
+		49183CCB1CD39FCB0086761F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ChateverUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.derrickCorp.ChateverUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Chatever;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		49183CCC1CD39FCB0086761F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ChateverUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.derrickCorp.ChateverUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Chatever;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49183C971CD39FCB0086761F /* Build configuration list for PBXProject "Chatever" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49183CC21CD39FCB0086761F /* Debug */,
+				49183CC31CD39FCB0086761F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49183CC41CD39FCB0086761F /* Build configuration list for PBXNativeTarget "Chatever" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49183CC51CD39FCB0086761F /* Debug */,
+				49183CC61CD39FCB0086761F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49183CC71CD39FCB0086761F /* Build configuration list for PBXNativeTarget "ChateverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49183CC81CD39FCB0086761F /* Debug */,
+				49183CC91CD39FCB0086761F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49183CCA1CD39FCB0086761F /* Build configuration list for PBXNativeTarget "ChateverUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49183CCB1CD39FCB0086761F /* Debug */,
+				49183CCC1CD39FCB0086761F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49183C941CD39FCB0086761F /* Project object */;
+}
