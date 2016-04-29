@@ -14,6 +14,7 @@
 		49183CAA1CD39FCB0086761F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49183CA81CD39FCB0086761F /* LaunchScreen.storyboard */; };
 		49183CB51CD39FCB0086761F /* ChateverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49183CB41CD39FCB0086761F /* ChateverTests.swift */; };
 		49183CC01CD39FCB0086761F /* ChateverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49183CBF1CD39FCB0086761F /* ChateverUITests.swift */; };
+		49DF1ABC1CD3C9F500E7B64C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DF1ABB1CD3C9F500E7B64C /* Message.swift */; };
 		B1BE25EFF92AC65A9773F35C /* libPods-Chatever.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 988315B7A8724E4CF00D4F3B /* libPods-Chatever.a */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		49183CBF1CD39FCB0086761F /* ChateverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChateverUITests.swift; sourceTree = "<group>"; };
 		49183CC11CD39FCB0086761F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49183CCD1CD3A2FE0086761F /* Chatever-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chatever-Bridging-Header.h"; sourceTree = "<group>"; };
+		49DF1ABB1CD3C9F500E7B64C /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		53D47C615604A5527370F057 /* Pods-Chatever.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatever.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chatever/Pods-Chatever.release.xcconfig"; sourceTree = "<group>"; };
 		988315B7A8724E4CF00D4F3B /* libPods-Chatever.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Chatever.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -121,6 +123,7 @@
 				49183CA81CD39FCB0086761F /* LaunchScreen.storyboard */,
 				49183CAB1CD39FCB0086761F /* Info.plist */,
 				49183CCD1CD3A2FE0086761F /* Chatever-Bridging-Header.h */,
+				49DF1ABB1CD3C9F500E7B64C /* Message.swift */,
 			);
 			path = Chatever;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49DF1ABC1CD3C9F500E7B64C /* Message.swift in Sources */,
 				49183CA21CD39FCB0086761F /* ViewController.swift in Sources */,
 				49183CA01CD39FCB0086761F /* AppDelegate.swift in Sources */,
 			);
