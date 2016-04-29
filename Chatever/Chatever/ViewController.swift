@@ -83,3 +83,19 @@ extension ViewController{
         return nil
     }
 }
+
+/**
+*  handle button press event
+*/
+
+// MARK: - make button functional
+extension ViewController{
+    override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
+        let message = JSQMessage(senderId: senderId, senderDisplayName: senderDisplayName, date: date, text: text)
+        self.messages += [message]
+        self.finishSendingMessage()
+    }
+    
+    override func didPressAccessoryButton(sender: UIButton!) {
+    }
+}
