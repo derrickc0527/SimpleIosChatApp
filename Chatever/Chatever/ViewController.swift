@@ -52,6 +52,8 @@ extension ViewController{
     func setup(){
         self.senderId = UIDevice.currentDevice().identifierForVendor?.UUIDString
         self.senderDisplayName = UIDevice.currentDevice().identifierForVendor?.UUIDString
+        self.channel.delegate = self
+        self.channel.subscribeToChannel()
     }
 }
 
@@ -144,3 +146,39 @@ extension ViewController{
         return jsqMessages
     }
 }
+
+// MARK: - chat channels
+extension ViewController: SCChannelDelegate{
+    
+    func addMessageFromNotification(notification: SCChannelNotificationMessage){
+        let message = Message(fromDictionary: notification.payload)
+        if message.senderId == self.senderId{
+            //write something if you want to add messages manually
+            return
+        }
+        self.messages.append(self.jsqMessageFromSyncanoMessage(message))
+        self.finishReceivingMessage()
+    }
+    
+    func updateMessageFromNotification(notification: SCChannelNotificationMessage){
+        
+    }
+    
+    func deleteMessageFromNotification(notification: SCChannelNotificationMessage){
+        
+    }
+    
+    func channelDidReceivedNotificationMessage(notificationMessage: SCChannelNotificationMessage!){
+        switch(notificationMessage.action){
+        case .Create:
+            self.addMessageFromNotification(notificationMessage)
+        case .Delete:
+            self.deleteMessageFromNotification(notificationMessage)
+        case .Update:
+            self.updateMessageFromNotification(notificationMessage)
+        default:
+            
+        }
+    }
+}
+
