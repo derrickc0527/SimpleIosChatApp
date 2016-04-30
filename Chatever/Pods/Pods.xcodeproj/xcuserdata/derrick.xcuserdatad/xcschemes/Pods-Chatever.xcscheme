@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '5E5895320551B8215CA79E03'
+               BlueprintIdentifier = '8163C1CBE95DFA554FCF7686'
                BlueprintName = 'Pods-Chatever'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-Chatever.a'>
+               BuildableName = 'Pods_Chatever.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

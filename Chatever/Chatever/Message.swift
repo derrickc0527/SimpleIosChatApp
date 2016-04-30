@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import syncano_ios
 
 class Message: SCDataObject {
     

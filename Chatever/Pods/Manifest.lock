@@ -21,6 +21,7 @@ PODS:
     - FMDBMigrationManager/System (= 1.4.1)
   - FMDBMigrationManager/System (1.4.1):
     - FMDB/standard (>= 2.3)
+  - IQKeyboardManagerSwift (4.0.2)
   - JSQMessagesViewController (7.2.0):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
@@ -36,6 +37,7 @@ PODS:
   - UICKeyChainStore (2.1.0)
 
 DEPENDENCIES:
+  - IQKeyboardManagerSwift
   - JSQMessagesViewController
   - syncano-ios
 
@@ -43,6 +45,7 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   FMDB: c1968bab3ab0aed38f66cb778ae1e7fa9a652b6e
   FMDBMigrationManager: d52007f328ea0665e8985ca8a33500707aef084f
+  IQKeyboardManagerSwift: 2f2c19c509f67c4c0df2826db54033d3e090ce65
   JSQMessagesViewController: 73cab48aa92fc2d512f3b6724f3425cc47a19eb5
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   Mantle: bc40bb061d8c2c6fb48d5083e04d928c3b7f73d9

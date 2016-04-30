@@ -7,17 +7,19 @@
 //
 
 import UIKit
+import JSQMessagesViewController
+import syncano_ios
 
-let ChannelName = "messages"
 
 class ViewController: JSQMessagesViewController {
     
-    let syncano = Syncano.sharedInstanceWithApiKey("212adb9b94ee972fdbba69986a5f5944f2046d77", instanceName: "chatever")
     let channel = SCChannel(name: ChannelName)
     
     let incomingBubble = JSQMessagesBubbleImageFactory().incomingMessagesBubbleImageWithColor(UIColor(red: 10/255, green: 180/255, blue: 230/255, alpha: 1.0))
     let outgoingBubble = JSQMessagesBubbleImageFactory().outgoingMessagesBubbleImageWithColor(UIColor.lightGrayColor())
     var messages = [JSQMessage]()
+    let loginViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier(loginViewControllerIdentifier) as! LoginViewController
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,11 @@ class ViewController: JSQMessagesViewController {
         self.setup()
         self.downloadLatestMessagesFromSyncano()
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.showLoginViewControllerIfNotLoggedIn()
     }
 
     override func didReceiveMemoryWarning() {
@@ -148,28 +155,28 @@ extension ViewController{
 }
 
 // MARK: - chat channels
-extension ViewController: SCChannelDelegate{
+extension ViewController : SCChannelDelegate {
     
-    func addMessageFromNotification(notification: SCChannelNotificationMessage){
+    func addMessageFromNotification(notification: SCChannelNotificationMessage) {
         let message = Message(fromDictionary: notification.payload)
-        if message.senderId == self.senderId{
-            //write something if you want to add messages manually
+        if message.senderId == self.senderId {
+            //we don't need to add messages from ourselves
             return
         }
         self.messages.append(self.jsqMessageFromSyncanoMessage(message))
         self.finishReceivingMessage()
     }
     
-    func updateMessageFromNotification(notification: SCChannelNotificationMessage){
+    func updateMessageFromNotification(notification: SCChannelNotificationMessage) {
         
     }
     
-    func deleteMessageFromNotification(notification: SCChannelNotificationMessage){
+    func deleteMessageFromNotification(notification: SCChannelNotificationMessage) {
         
     }
     
-    func channelDidReceivedNotificationMessage(notificationMessage: SCChannelNotificationMessage!){
-        switch(notificationMessage.action){
+    func chanellDidReceivedNotificationMessage(notificationMessage: SCChannelNotificationMessage!) {
+        switch(notificationMessage.action) {
         case .Create:
             self.addMessageFromNotification(notificationMessage)
         case .Delete:
@@ -177,8 +184,73 @@ extension ViewController: SCChannelDelegate{
         case .Update:
             self.updateMessageFromNotification(notificationMessage)
         default:
-            
+            break
         }
     }
 }
+
+// MARK: - login logic
+extension ViewController: LoginDelegate{
+    func didSignUp(){
+        self.prepareAppForNewUser()
+        self.hideLoginViewController()
+    }
+    
+    func didLogin(){
+        self.prepareAppForNewUser()
+        self.hideLoginViewController()
+    }
+    
+    func prepareAppForNewUser(){
+        self.setupSenderData()
+        self.reloadAllMessages()
+    
+    }
+    
+    func isLoggedIn() -> Bool {
+        let isLoggedIn = (SCUser.currentUser() != nil)
+        return isLoggedIn
+    }
+    
+    func logout(){
+        SCUser.currentUser()?.logout()
+    }
+    
+    func showLoginViewController(){
+        self.presentViewController(self.loginViewController, animated: true){
+            
+        }
+    }
+    
+    func hideLoginViewController(){
+        self.dismissViewControllerAnimated(true){
+            
+        }
+    }
+    
+    func showLoginViewControllerIfNotLoggedIn(){
+        if (self.isLoggedIn() == false){
+            self.showLoginViewController()
+        }
+    }
+    
+    @IBAction func logoutPressed(sender: UIBarButtonItem){
+        self.logout()
+        self.showLoginViewControllerIfNotLoggedIn()
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

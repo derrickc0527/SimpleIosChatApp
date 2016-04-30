@@ -82,3 +82,26 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Chatever/AFNetworking.framework"
+  install_framework "Pods-Chatever/FMDB.framework"
+  install_framework "Pods-Chatever/FMDBMigrationManager.framework"
+  install_framework "Pods-Chatever/IQKeyboardManagerSwift.framework"
+  install_framework "Pods-Chatever/JSQMessagesViewController.framework"
+  install_framework "Pods-Chatever/JSQSystemSoundPlayer.framework"
+  install_framework "Pods-Chatever/Mantle.framework"
+  install_framework "Pods-Chatever/UICKeyChainStore.framework"
+  install_framework "Pods-Chatever/syncano_ios.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Chatever/AFNetworking.framework"
+  install_framework "Pods-Chatever/FMDB.framework"
+  install_framework "Pods-Chatever/FMDBMigrationManager.framework"
+  install_framework "Pods-Chatever/IQKeyboardManagerSwift.framework"
+  install_framework "Pods-Chatever/JSQMessagesViewController.framework"
+  install_framework "Pods-Chatever/JSQSystemSoundPlayer.framework"
+  install_framework "Pods-Chatever/Mantle.framework"
+  install_framework "Pods-Chatever/UICKeyChainStore.framework"
+  install_framework "Pods-Chatever/syncano_ios.framework"
+fi
